@@ -14,11 +14,15 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
-  implementation 'org.projectlombok:lombok:1.18.22'
-  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.projectlombok:lombok:1.18.22'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	implementation 'io.projectreactor:reactor-core:3.4.13'
+	implementation 'io.projectreactor:reactor-core:3.4.14'
 	testImplementation 'io.projectreactor:reactor-test:3.4.14'
+
+	implementation 'io.projectreactor:reactor-tools:3.4.14'
+	testImplementation 'io.projectreactor.tools:blockhound:1.0.6.RELEASE'
+	//testImplementation 'io.projectreactor.tools:blockhound-junit-platform:1.0.6.RELEASE'
 }
 
 test {
