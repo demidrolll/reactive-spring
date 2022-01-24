@@ -13,13 +13,6 @@ import java.util.Locale;
 @Testcontainers
 public abstract class BaseCustomerRepositoryTest {
 
-	// <1>
-	@DynamicPropertySource
-	static void registerProperties(DynamicPropertyRegistry registry) {
-		registry.add("spring.sql.init.mode", () -> "always");
-		registry.add("spring.r2dbc.url", () -> "r2dbc:tc:postgresql://rsbhost/rsb?TC_IMAGE_TAG=9.6.8");
-	}
-
 	// <2>
 	public abstract SimpleCustomerRepository getRepository();
 
